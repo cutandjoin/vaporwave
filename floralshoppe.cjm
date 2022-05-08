@@ -7,7 +7,7 @@
 //3.[スタート]ボタン押下でデスクトップに「Macintosh Plus」フォルダが作成され、編集したファイルが出力されます
 
 CJMP RESET
-CJM IMPORT
+CJM IMPORT,rc=4,mc=4
 #
 ブート.mp3
 00:00:000 0:

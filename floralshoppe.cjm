@@ -1,81 +1,76 @@
-//Macintosh Plus“Floral Shoppe”(https://vektroid.bandcamp.com/album/floral-shoppe)のMP3ファイルをCJMP3 v1.4.9.5で加工･編集し全曲のサビのメドレーを作成します
+//Macintosh Plus“Floral Shoppe”(https://vektroid.bandcamp.com/album/floral-shoppe)のMP3ファイルを
+//CJMP3 v1.5.0.0(https://cutandjoin.com/cj-mp3/1399/)で加工･編集し全曲のサビのメドレーを作成します
 
 //[使い方]
 //1.このテキスト全体をコピーしてCJMP3のテキストエディタ ([メニュー] > [ファイル] > [テキストエディタを開く]) にペースト→[実行]ボタン
 //2.ウインドウが開くのでMacintosh Plus“Floral Shoppe”全11ファイルをドロップ
 //3.[スタート]ボタン押下でデスクトップに「Macintosh Plus」フォルダが作成され、編集したファイルが出力されます
 
-
 CJMP RESET
-CJMP vr=2
-CJM CUTN,em=0,ev=2,cd=0,rc=4,mc=4
+CJM IMPORT
 #
 ブート.mp3
 00:00:000 0:
-01:16:695 1:"01c"
-01:48:982 0:
+01:17:195 1:"01"
+01:48:882 0:
 #
 リサフランク420.mp3
 00:00:000 0:
-04:25:613 1:"02c"
-04:58:266 0:
+04:26:113 1:"02"
+04:58:166 0:
 #
 花の専門店.mp3
 00:00:000 0:
-01:28:737 1:"03c"
-01:52:770 0:
+01:29:237 1:"03"
+01:52:670 0:
 #
 ライブラリ.mp3
 00:00:000 0:
-00:41:508 1:"04c"
-01:14:266 0:
+00:42:008 1:"04"
+01:14:166 0:
 #
 地理.mp3
 00:00:000 0:
-03:05:129 1:"05c"
-04:00:535 0:
+03:05:629 1:"05"
+04:00:435 0:
 #
 ECCOと悪寒ダイビング.mp3
 00:00:000 0:
-02:12:231 1:"06c"
-02:41:985 0:
+02:12:731 1:"06"
+02:41:885 0:
 #
 数学.mp3
 00:00:000 0:
-03:05:991 1:"07c"
-04:08:320 0:
+03:06:491 1:"07"
+04:08:220 0:
 #
 待機.mp3
 00:00:000 0:
-00:19:382 1:"08c"
-00:40:724 0:
+00:19:882 1:"08"
+00:40:624 0:
 #
 て.mp3
 00:00:000 0:
-00:45:008 1:"09c"
-01:33:361 0:
+00:45:508 1:"09"
+01:33:261 0:
 #
 月.mp3
 00:00:000 0:
-00:34:795 1:"10c"
-01:08:545 0:
+00:35:295 1:"10"
+01:08:445 0:
 #
 海底.mp3
 00:00:000 0:
-00:11:755 1:"11c"
-00:29:178 0:
+00:12:255 1:"11"
+00:29:078 0:
 
-
-CJM VJOIN,em=1,ae=0,ib=30.0,is=0.5,oc=30.0,os=0.1,cd=1,mf="Macintosh Plus",ex=1
-#"Floral Shoppeメドレー"
-01c.mp3
-02c.mp3
-03c.mp3
-04c.mp3
-05c.mp3
-06c.mp3
-07c.mp3
-08c.mp3
-09c.mp3
-10c.mp3
-11c.mp3
+CJM SELECTALL,DECOMPRESS(0,1),SEQUENCE(4,1)
+CJM SETALLITEMS(2),VBR,MERGE
+CJM STRETCH(0.5,1)
+CJM STRETCH(0.1,2)
+CJM FADE(1,1500,0.5,30,0,0.1,0,30)
+CJM NAMEB("Floral Shoppeメドレー"),COMPRESS
+CJM UNFIXFS
+CJM UNFIXCUE
+CJM UNSELECTALL
+CJM SETALLITEMS(2),VBR,NAMEST("Macintosh Plus"),NAMEMF("Macintosh Plus"),EXPORTMP3,EXECUTE
